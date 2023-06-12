@@ -28,6 +28,6 @@ To run your tests
 
 |  Code Challeng | ReadMe link  |   |   |   |
 |---|---|---|---|---|
-|  Reverse Array 01  |   |   |   |   |
+|  Reverse Array 01  |  https://github.com/Armada6199/data-structures-and-algorithms/blob/main/javascript/reverseArray/reverseArrayReadme.md |   |   |   |
 |   |   |   |   |   |
 |   |   |   |   |   |
