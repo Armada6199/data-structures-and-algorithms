@@ -1,51 +1,17 @@
+
 # Reverse Array
 
-## problem domain
 
-> you have an array and you need to reverse it without using any built in methods and in a clean and well strucutred way
+## Whiteboard Process
 
-## algorithim
+ ![whiteboard image](../assets/reverseArray.png)
 
->create a function that accepts an array as an parameter
+## Approach & Efficiency
 
->make a new empty array to push the elements in reverse to
+### i created a new array and looped in the old array from last to first and on each iteration i push the item to the new array and then returned it , the space and time complixity is O(N) cause i am creating a new array with n elements and at worst case will do n operations .
 
->loop into the array from the last index to the first index
+## Solution
 
->on each iteration push the element to the new array
-
->return the new array
+### to test my code go to the javascript file and run npm test and it should show you the test suite that i did for the application 
 
 
-## Test Cases
-
-### Given [1,2,3,4,5,6]=====>[6,5,4,3,2,1]
-
-### Given [55,33,21,2,3,5,6] =====>[6,5,3,2,21,33,55]
-
-## Given [0]=====>[0]
-
-
-## Pseudo Code 
-
-Algorith reverseArray (array)
-
-const newArray=[]
-
- let newArr=[]\
-  for (let i=arr.length-1;i>=0;i--)\
-    newArr.push(arr[i])\
-  return newArr
-
-
-  ## walkthrough & Big-O
-arr=[2,3,4,5,6]\
-newArr=[]\
-1-newArr=[6]\
-2-newArr=[6,5]\
-3-newArr=[6,5,4]\
-4-newArr=[6,5,4,3]\
-5-newArr=[6,5,4,3,2]
-
-### Big-O
-> Time complexity is O(N),Space Allocation is O(n)
