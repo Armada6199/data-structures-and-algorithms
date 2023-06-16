@@ -1,35 +1,12 @@
+# What i learned from my prep-project
 
-# Insert shift
+## Debounce function ,Debouncing is a way to delay a some functionality ,it is usefull to make sure that one heavy functionality doesn't get called or executed very often .
 
-## Whiteboard Process
+##  Let's say you have a form and you need to validate it then request a search from the API  and rerender the componet based on the search result from the backend ,and that backend takes alot of time and resources to compute ,doing that search on every user input is not very efficient so you need a way to delay that request and thats way is **DEBOUNCING **.
 
- ![whiteboard image](../assets/insertshift.png)
 
-## Approach & Efficiency
+### You*can  create your own debounce function or react hook it may be hard at first to understand but it will benfit you alot and save you alot of time in the appllication long term* 
 
-> i created a function and i looped into the array two times , the first time i inserted the values to the new array from start to middle,then i pushed the target value to the new array,then i looped again from mid to end and pushed the items again . 
 
-## Solution
-
->
->module.exports= class insertShiftArray{
->  constructor(){}
-
-  >insertShiftArray(arr,value){
-
-   >let newArr=[];
-
-    for (let i=0;i<arr.length/2;i++){
-     newArr.push(arr[i]);
-}
-
->newArr.push(value);
-
->for(let i =arr.length/2;i<arr.length;i++)}{
-
->newArr.push(arr[i]);
-}
-
-};
-
-### to test my code go to the javascript file and run npm test and it should show you the test suite that i did for the application
+## To learn more about debouncing please refere to this article on Code academy.
+>https://www.freecodecamp.org/news/debouncing-explained/
