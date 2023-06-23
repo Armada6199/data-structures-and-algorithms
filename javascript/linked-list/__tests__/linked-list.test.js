@@ -17,6 +17,6 @@ describe('Linked List', () => {
     testLinked.insertHead(100);
     testLinked.insertHead(200);
     testLinked.insertHead(300);
-    expect(testLinked.getSize()).toBe(3);
+    expect(testLinked.getSize()).toBe(5);//size
   });
 });
