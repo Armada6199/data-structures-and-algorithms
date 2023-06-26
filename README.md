@@ -29,3 +29,5 @@ To run your tests
 
 |  Code Challeng | ReadMe link  |   |   |   |
 |---|---|---|---|---|
+|  linkedList | https://github.com/Armada6199/data-structures-and-algorithms/blob/main/javascript/linked-list/readme.md  |   |   |   |
+
