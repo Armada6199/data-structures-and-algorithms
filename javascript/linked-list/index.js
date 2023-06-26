@@ -5,7 +5,7 @@ class Node {
   constructor(data,next=null){
     this.data=data;
     this.next=next;
-}
+  }
 }
 class LinkedList {
   constructor(){
@@ -65,6 +65,45 @@ class LinkedList {
     return false;
 
   }
+  insertBefore(value, targetValue) {
+    if (!this.head) {
+      return;
+    }
+    if (this.head.value === targetValue) {
+      const newNode = new Node(value);
+      newNode.next = this.head;
+      this.head = newNode;
+      return;
+    }
+
+    let currentNode = this.head;
+    while (currentNode.next) {
+      if (currentNode.next.value === targetValue) {
+        const newNode = new Node(value);
+        newNode.next = currentNode.next;
+        currentNode.next = newNode;
+        return;
+      }
+      currentNode = currentNode.next;
+    }
+  }
+
+  insertAfter(value, targetValue) {
+    if (!this.head) {
+      return;
+    }
+
+    let currentNode = this.head;
+    while (currentNode) {
+      if (currentNode.value === targetValue) {
+        const newNode = new Node(value);
+        newNode.next = currentNode.next;
+        currentNode.next = newNode;
+        return;
+      }
+      currentNode = currentNode.next;
+    }
+  }
   nthFromTail(num){
     const size=this.getSize();
     let iterations=size-num;
@@ -100,4 +139,5 @@ linked1.insertTail(9);
 
 console.log(linked1.nthFromTail(3));
 
-module.exports = LinkedList;
+module.exports = {LinkedList,Node};
+
