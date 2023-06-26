@@ -1,3 +1,4 @@
+
 'use strict';
 
 class Node {
@@ -21,6 +22,7 @@ class LinkedList {
       current=current.next;
     }
     current.next=new Node(data);
+    this.size++;
   }
   insertAt(data,index){
     let current=this.head;
@@ -63,6 +65,16 @@ class LinkedList {
     return false;
 
   }
+  nthFromTail(num){
+    const size=this.getSize();
+    let iterations=size-num;
+    let current=this.head;
+    while(iterations>1){
+      current=current.next;
+      iterations--;
+    }
+    return current;
+  }
   getHead(){
     return this.head;
   }
@@ -73,13 +85,19 @@ class LinkedList {
     this.head.next=null;
     this.head=null;
   }
+ 
 }
 const linked1=new LinkedList();
-linked1.insertHead(300);
-linked1.insertHead(200);
-linked1.insertHead(100);
-linked1.insertTail(400);
-linked1.insertAt(600,2);
-console.log(linked1.printAllData());
+linked1.insertHead(1);
+linked1.insertHead(2);
+linked1.insertHead(3);
+linked1.insertTail(4);
+linked1.insertTail(5);
+linked1.insertTail(6);
+linked1.insertTail(7);
+linked1.insertTail(8);
+linked1.insertTail(9);
+
+console.log(linked1.nthFromTail(3));
 
 module.exports = LinkedList;
