@@ -1,7 +1,7 @@
 
 'use strict';
 // Require our linked list implementation
-const LinkedList = require('../index');
+const {LinkedList,Node} = require('../index');
 
 describe('Linked List', () => {
   const testLinked=new LinkedList();
@@ -19,4 +19,5 @@ describe('Linked List', () => {
     testLinked.insertHead(300);
     expect(testLinked.getSize()).toBe(5);//size
   });
+ 
 });
