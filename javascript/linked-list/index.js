@@ -114,6 +114,46 @@ class LinkedList {
     }
     return current;
   }
+  zipLists(list1,list2){
+    if (!list1) {
+      return list2;
+    }
+  
+    if (!list2) {
+      return list1;
+    }
+  
+    let curr1 = list1;
+    let curr2 = list2;
+    let result = null;
+    let currResult = null;
+  
+    while (curr1 && curr2) {
+      if (!result) {
+        result = curr1;
+        currResult = result;
+      } else {
+        currResult.next = curr1;
+        currResult = currResult.next;
+      }
+  
+      curr1 = curr1.next;
+  
+      currResult.next = curr2;
+      currResult = currResult.next;
+  
+      curr2 = curr2.next;
+    }
+  
+    if (curr1) {
+      currResult.next = curr1;
+    } else if (curr2) {
+      currResult.next = curr2;
+    }
+  
+    return result;
+  }
+  
   getHead(){
     return this.head;
   }
