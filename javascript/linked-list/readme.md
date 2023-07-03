@@ -27,5 +27,11 @@
 <https://github.com/Armada6199/data-structures-and-algorithms/pull/8/>
 
 
+## code challange 08 image 
+
+![whiteboard  insert at and before and after ](../assets/linkedlistZip.png)
+
+### pull request 08
+
 ### readme
 
