@@ -23,8 +23,8 @@
 
 #### PR
 
-<>
+<https://github.com/Armada6199/data-structures-and-algorithms/pull/11>
 
 #### GitHub Actions
 
-<>
+<https://github.com/Armada6199/data-structures-and-algorithms/actions>
