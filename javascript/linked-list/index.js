@@ -49,12 +49,11 @@ class LinkedList {
     let current=this.head;
     let allNodes=``;
     while (current){
-      allNodes+=`{${current.data}}->`;
+      allNodes+=`${current.data}`;
       current=current.next;
     }
-    return allNodes+'NULL';
+    return allNodes;
   }
-
 
   includes(value){
     let current=this.head;
@@ -114,6 +113,12 @@ class LinkedList {
     }
     return current;
   }
+  isPalindrome(){
+    // const current=this.head;
+    const data= this.printAllData();
+    if(data===data.split('').reverse().join('')) return true;
+    else return false;
+  }
   zipLists(list1,list2){
     if (!list1) {
       return list2;
@@ -167,17 +172,14 @@ class LinkedList {
  
 }
 const linked1=new LinkedList();
-linked1.insertHead(1);
-linked1.insertHead(2);
-linked1.insertHead(3);
-linked1.insertTail(4);
-linked1.insertTail(5);
-linked1.insertTail(6);
-linked1.insertTail(7);
-linked1.insertTail(8);
-linked1.insertTail(9);
-
-console.log(linked1.nthFromTail(3));
+linked1.insertHead("t");
+linked1.insertHead("a");
+linked1.insertHead("c");
+linked1.insertHead("o");
+linked1.insertHead("c");
+linked1.insertHead("a");
+linked1.insertHead("t");
+console.log(linked1.isPalindrome());
 
 module.exports = {LinkedList,Node};
 
