@@ -103,7 +103,7 @@ const second =new Node(15,third);
 const first=new Node(25,second,fourth);
 const tree=new Tree(first);
 const binaryTree=new BinaryTree(first);
-console.log(binaryTree.add(16));
+console.log(binaryTree.preOrder());
 module.exports={
     Node,
     Tree,
