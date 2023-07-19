@@ -5,6 +5,7 @@ class Animal{
         this.next=next;
     }
 };
+const animalImg=require('../assets/animalshelter.png')
 class AnimalShelter{
     constructor(){
         this.front=null;
