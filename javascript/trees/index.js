@@ -50,29 +50,17 @@ class BinaryTree extends Tree{
     constructor(root){
         super(root)
     }
-    add(value){
-        var newNode = new Node(value);
-        if(this.root === null){
-            this.root = newNode;
-            return this;
+    add(root=this.root,value){
+        if(root.value>value){
+            if(root.left!==null){
+                this.add(root.left,value);
+            }else root.left=new Node(value);
+        }else {
+            if(root.right!==null){
+                this.add(root.right,value);
+            }else root.right=new Node(value);
         }
-        let current = this.root;
-        while(current){
-            if(value === current.value) return undefined;
-            if(value < current.value){
-                if(current.left === null){
-                    current.left = newNode;
-                    return this;
-                }
-                current = current.left;
-            } else {
-                if(current.right === null){
-                    current.right = newNode;
-                    return this;
-                } 
-                current = current.right;
-            }
-        }
+        return 'Inserted';
     }
     contains(value){
         if(!this.root) return false
@@ -103,6 +91,8 @@ const second =new Node(15,third);
 const first=new Node(25,second,fourth);
 const tree=new Tree(first);
 const binaryTree=new BinaryTree(first);
+console.log(binaryTree.add(first,35))
+console.log(binaryTree.add(first,26))
 console.log(binaryTree.preOrder());
 module.exports={
     Node,

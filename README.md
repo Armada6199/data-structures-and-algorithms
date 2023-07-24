@@ -1,33 +1,40 @@
+# Amazon S3 Overview
 
-# Data Structures and Algorithms
+## Buckets
+- Data is organized into "buckets," which act like directories or folders to store files.
+- Bucket names must be globally unique across all of AWS.
 
-See [setup instructions](https://codefellows.github.io/setup-guide/code-301/2-code-challenges), in the Code 301 Setup Guide.
+## Objects
+- Files uploaded to S3 are called "objects."
+- Each object consists of data, metadata, and a unique identifier.
 
-## Repository Quick Tour and Usage
+## Regions
+- S3 operates in different AWS regions, allowing you to choose the region for your S3 bucket.
+- Each region is a separate geographic location with its own infrastructure.
 
-### 301 Code Challenges
+## Access Control
+- S3 provides fine-grained access control through IAM to manage data access.
+- You can configure access policies and permissions.
 
-Under the `javascript` folder, at the top level, is a sub-folder called `code-challenges`
+## Data Consistency
+- S3 offers strong read-after-write consistency for all objects by default in all regions.
+- Immediately read data after writing, avoiding stale data risks.
 
-Each day, you'll add one new file to this folder to do your work for the day's assigned code challenge
+## Storage Classes
+- S3 provides various storage classes for different use cases:
+  - Standard: For frequently accessed data.
+  - Intelligent-Tiering: Automatically moves objects between Standard and Archive tiers to optimize costs based on usage patterns.
+  - Glacier: For long-term archival storage with lower costs and higher retrieval times.
+  - Deep Archive: For rarely accessed data with the lowest storage costs and higher retrieval times.
 
-If you have not already done so, run `npm install` from within this folder to setup your system to be able to run tests using `Jest`
+## Versioning
+- Enable versioning on a bucket to preserve all object versions, protecting against accidental data loss or overwrites.
 
-To run your tests
+## Encryption
+- S3 offers both server-side and client-side encryption for data security and privacy compliance.
 
-- Change to the `javascript` folder
-- run `npm test` to run all of the tests
-- run `npm test ##` to only run tests for challenge ## (i.e. 01)
+## Static Website Hosting
+- Use S3 to host static websites by making bucket content publicly accessible.
 
-### 401 Data Structures, Code Challenges
-
-- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
-
-
-
-## Table of content 
-
-|  Code Challeng | ReadMe link  |   |   |   |
-|---|---|---|---|---|
-|  linkedList | https://github.com/Armada6199/data-structures-and-algorithms/blob/main/javascript/linked-list/readme.md  |   |   |   |
-
+## Testing and Uploading Files
+- Test and upload files to S3 using AWS Management Console, AWS CLI, or AWS SDKs in various programming languages.
