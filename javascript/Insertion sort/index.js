@@ -1,20 +1,13 @@
-class InsertionSort {
-    static sort(array) {
-      const length = array.length;
-  
-      for (let i = 1; i < length; i++) {
-        const currentElement = array[i];
-        let j = i - 1;
-  
-        while (j >= 0 && array[j] > currentElement) {
-          array[j + 1] = array[j];
-          j--;
-        }
-  
-        array[j + 1] = currentElement;
+function insertionSort(arr){
+  for(let i=0;i<arr.length;i++){
+    const min=i;
+    for(let j=i+1;j<arr.length;j++){
+      if(arr[j]<arr[min]){
+        min=j;
       }
-  ///fsd
-      return array;
     }
+    const temp=arr[min];
+    arr[min]=arr[i];
+    arr[i]=temp;
   }
-  
+}
