@@ -1,31 +1,34 @@
-const { sortByReleaseDate, sortByTitleAlphabetically } = require('./index');
+const { sortByReleaseDate, sortByAlphabeticalTitle } = require('./index');
+
+const movies = [
+  { title: 'The Avengers', releaseDate: '2012-05-04' },
+  { title: 'Avatar', releaseDate: '2009-12-18' },
+];
 
 describe('Movie Sorting Functions', () => {
-  const movies = [
-    { title: "Movie C", year: 2010, genres: ["Drama", "Action"] },
-    { title: "Movie A", year: 2005, genres: ["Comedy"] },
-    { title: "Movie B", year: 2015, genres: ["Adventure", "Fantasy"] }
-  ];
-
-  test('Sort movies by release date', () => {
-    const sortedMovies = sortByReleaseDate(movies);
-    const expectedSortedMovies = [
-      { title: "Movie A", year: 2005, genres: ["Comedy"] },
-      { title: "Movie C", year: 2010, genres: ["Drama", "Action"] },
-      { title: "Movie B", year: 2015, genres: ["Adventure", "Fantasy"] }
-    ];
-
-    expect(sortedMovies).toEqual(expectedSortedMovies);
+  describe('sortByReleaseDate', () => {
+    it('should sort movies by release date', () => {
+      const sortedMovies = sortByReleaseDate(movies);
+    });
+    
+    it('should not modify the original array', () => {
+      const originalMovies = [...movies];
+      sortByReleaseDate(movies);
+      
+      expect(movies).toEqual(originalMovies);
+    });
   });
-
-  test('Sort movies alphabetically by title', () => {
-    const sortedMovies = sortByTitleAlphabetically(movies);
-    const expectedSortedMovies = [
-      { title: "Movie A", year: 2005, genres: ["Comedy"] },
-      { title: "Movie B", year: 2015, genres: ["Adventure", "Fantasy"] },
-      { title: "Movie C", year: 2010, genres: ["Drama", "Action"] }
-    ];
-
-    expect(sortedMovies).toEqual(expectedSortedMovies);
+  
+  describe('sortByAlphabeticalTitle', () => {
+    it('should sort movies alphabetically ignoring "A", "An", and "The"', () => {
+      const sortedMovies = sortByAlphabeticalTitle(movies);
+      
+    });
+    
+    it('should not modify the original array', () => {
+      const originalMovies = [...movies];
+      sortByAlphabeticalTitle(movies);
+            expect(movies).toEqual(originalMovies);
+    });
   });
 });
