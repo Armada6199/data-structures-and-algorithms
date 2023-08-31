@@ -28,6 +28,7 @@ The `HashTable` class implements a data structure that allows efficient storage 
 
 ### `hasItem` Method
 
+
 - **Description**: Checks if a key exists in the hash table.
 - **Usage**: `const exists = hashtable.hasItem(key);`
 
