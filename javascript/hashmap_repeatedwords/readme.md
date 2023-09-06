@@ -1,5 +1,5 @@
 >## Hash Table:
-
+4][9]
 
 > **WhiteBoard**
 <![white board ](image.png)>
@@ -8,7 +8,7 @@
 
 function hashTableRepeatedWord(str) {
   let strArr = str.toLowerCase().match(/\w+/g);
-
+ +8957
   const stringHashTable = new Hashtable(strArr.size);
 
   for (let i = 0; i < strArr.length; i++) {
