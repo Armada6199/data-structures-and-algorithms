@@ -95,24 +95,20 @@ class BinaryTree extends Tree{
     };
 
 }
-length/2
-
-root=arr[length/2]===20;
-root.left=arr[length/2-1];
-root.right=arr[length/2+1];
-
-
-
-                   20
-            10             43
-           
-         1      5                 60
-      
-      
 [1,5,10,20,43,60];
 
-function convertArray(arr){
-
+function sortedArrayToBST(arr, start=0, end=arr.length)
+{
+    if (start > end)
+    {
+        return null;
+    }
+    var mid = parseInt((start + end) / 2);
+    var node = new Node(arr[mid]);
+  
+    node.left = sortedArrayToBST(arr, start, mid - 1);
+    node.right = sortedArrayToBST(arr, mid + 1, end);
+    return node;
 }
 const sixth=new Node(6);
 const fifth=new Node(3);
@@ -122,10 +118,11 @@ const second =new Node(1);
 const first=new Node(25,second,fourth);
 // const tree=new Tree(first);
 const binaryTree=new BinaryTree(first);
-// console.log(binaryTree.add(first,35))
-// console.log(binaryTree.add(first,26))
-// console.log(binaryTree.preOrder());
-console.log(binaryTree.isValidBST(first));
+
+var arr = [1, 2, 3, 4, 5, 6, 7];
+root = sortedArrayToBST(arr);
+
+console.log(root);
 module.exports={
     Node,
     Tree,
