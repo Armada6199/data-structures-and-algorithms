@@ -1,6 +1,6 @@
 class Graph {
     constructor() {
-      this.vertices = new Map(); // Using a Map to store vertices and their edges
+      this.vertices = new Map(); 
     }
   
     addVertex(value) {
